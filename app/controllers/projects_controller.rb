@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  load_and_authorize_resource
+  
   
   def index
     @projects = Project.all
@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   end
   
   def new
-    @project = Project.new
+    @project = Project.new()
   end
   
   def edit 
