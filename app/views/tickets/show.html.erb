@@ -4,25 +4,24 @@
  
 <p>
     <%= f.label :title %><br>
-  <%= @ticket.title %>
+    <%= @ticket.title %>
   </p>
   <p>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= @ticket.description %>
   </p>
   <p>
     <%= f.label :priority %><br>
-    <%= f.select :priority, ['Low', 'Normal', 'High', 'Expert', 'Master'] %>
+    <%= @ticket.priority %>
   </p>
   <p>
     <%= f.label :difficulty %><br>
-    <%= f.select :difficulty, ['Easy', 'Medium', 'Hard']%>
+    <%= @ticket.difficulty %>
   </p>
   <p>
     <%= f.label :status %><br>
-    <%= f.select :status, ['Open', 'Closed', 'Canceled'] %>
-  </p>
-  <p>
-    <%= f.submit %>
+    <%= @ticket.status %>
   </p>
 <% end %>
+
+<%= link_to 'Back', project_tickets_path %>
