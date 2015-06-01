@@ -8,4 +8,6 @@
   <%= @project.text %>
 </p>
 
+<%= link_to 'Ticket', project_tickets_path(@project, @ticket) %>
+
 <%= link_to 'Back', projects_path %>
