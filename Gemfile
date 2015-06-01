@@ -43,6 +43,7 @@ group :development, :test do
   gem 'spring'
   gem 'devise'
   gem "twitter-bootstrap-rails"
+  gem "cookie_alert"
   
 end
 

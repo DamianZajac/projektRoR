@@ -3,7 +3,7 @@
 one:
   title: MyString
   description: MyText
-  pioroty: MyText
+  priority: MyText
   difficulty: MyText
   status: MyText
   project_id: 
@@ -11,7 +11,7 @@ one:
 two:
   title: MyString
   description: MyText
-  pioroty: MyText
+  priority: MyText
   difficulty: MyText
   status: MyText
   project_id: 

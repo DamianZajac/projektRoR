@@ -1,6 +1,8 @@
-<h2>Add a ticket:</h2>
+<h2>Edit ticket</h2>
+
 <%= form_for([@project, @project.tickets.build]) do |f| %>
-  <p>
+ 
+<p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
