@@ -1,6 +1,6 @@
 <h2>Edit ticket</h2>
 
-<%= form_for([@project, @project.tickets.build]) do |f| %>
+<%= form_for([@project, @ticket]) do |f| %>
  
 <p>
     <%= f.label :title %><br>
@@ -19,7 +19,7 @@
     <%= f.select :difficulty, ['Easy', 'Medium', 'Hard']%>
   </p>
   <p>
-    <%= f.label :status %>(opened/closed/canceled)<br>
+    <%= f.label :status %><br>
     <%= f.select :status, ['Open', 'Closed', 'Canceled'] %>
   </p>
   <p>
