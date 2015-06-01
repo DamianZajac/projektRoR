@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :projects do
-    resource :ticets
-  end
+  resources :projects
   
   root 'welcome#index'
 

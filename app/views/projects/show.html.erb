@@ -8,15 +8,4 @@
   <%= @project.text %>
 </p>
 
-<h2>Add a ticket:</h2>
-<%= form_for([@project, @project.ticets.build]) do |f| %>
-  <p>
-    <%= f.label :name_ticet %><br>
-    <%= f.text_field :name_ticet %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
 <%= link_to 'Back', projects_path %>
