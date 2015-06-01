@@ -1,23 +1,7 @@
 <h1>Listing Projects</h1>
 
-<br><br>
 <%= link_to 'New project', new_project_path %>
-
-<div id="flash">
-    <%= flash[:notice] if flash[:notice] %>
-    <%= flash[:alert] if flash[:alert] %>
-  </div>
-  
-  <% if user_signed_in? %>
-    Hello,
-    <%= current_user.full_name %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign in", new_user_session_path %>
-  <% end %>
-  
-  <%= yield %>
-
+ 
 <table border="1">
   <tr>
     <th>Title</th>
@@ -35,3 +19,4 @@
     </tr>
   <% end %>
 </table>
+<%= link_to 'Back', root_path %>
