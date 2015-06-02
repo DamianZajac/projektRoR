@@ -53,16 +53,15 @@
             <li><%= link_to "Link2", "/path2"  %></li>
             <li><%= link_to "Link3", "/path3"  %></li>
           </ul>
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-          <ul style="">
-            <li style="float:right"><%= link_to "Sign in", new_user_session_path %></li>
+          <ul style="list-style-type:none;">
+            <li style="float:right; margin-top: 12px;"><%= link_to "Sign in", new_user_session_path %></li>
           </ul>
         </div>
         
       </div>
     </div>
-
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
