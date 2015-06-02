@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   
   root 'welcome#index'
+  mount CookieAlert::Engine => "/cookie-alert"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

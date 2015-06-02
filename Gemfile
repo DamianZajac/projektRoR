@@ -44,7 +44,6 @@ group :development, :test do
   gem 'devise'
   gem "twitter-bootstrap-rails"
   gem "cookie_alert"
-  gem 'rails_bootstrap_navbar'
   
 end
 
