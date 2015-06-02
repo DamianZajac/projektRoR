@@ -1,26 +1,26 @@
-<%= link_to 'New ticket', new_project_ticket_path %>
+<% if user_signed_in? %><%= link_to 'New ticket', new_project_ticket_path %><% end %>
 <h2>Tickets</h2>
 <table border="1">
   <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Priority</th>
-    <th>Difficulty</th>
-    <th>Status</th>
-    <th colspan="3"></th>
+    <th style="padding:5px;">Title</th>
+    <th style="padding:5px;">Description</th>
+    <th style="padding:5px;">Priority</th>
+    <th style="padding:5px;">Difficulty</th>
+    <th style="padding:5px;">Status</th>
+    <th colspan="3" style="padding:5px;">Function</th>
   </tr>
  
   <% @project.tickets.each do |ticket| %>
     <tr>
-      <td><%= ticket.title %></td>
-      <td><%= ticket.description %></td>
-      <td><%= ticket.priority %></td>
-      <td><%= ticket.difficulty %></td>
-      <td><%= ticket.status %></td>
-      <td><%= link_to 'Edit', edit_project_ticket_path(@project, ticket) %></td>
-      <td><%= link_to 'Destroy', project_ticket_path(@project, ticket), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td style="padding:5px;"><%= ticket.title %></td>
+      <td style="padding:5px;"><%= ticket.description %></td>
+      <td style="padding:5px;"><%= ticket.priority %></td>
+      <td style="padding:5px;"><%= ticket.difficulty %></td>
+      <td style="padding:5px;"><%= ticket.status %></td>
+      <td style="padding:5px;"><%= link_to 'Edit', edit_project_ticket_path(@project, ticket) %></td>
+      <td style="padding:5px;"><%= link_to 'Destroy', project_ticket_path(@project, ticket), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
-
+<br>
 <%= link_to 'Back', projects_path %>

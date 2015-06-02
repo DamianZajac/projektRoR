@@ -49,19 +49,24 @@
         <a class="navbar-brand">Projekt</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><% if user_signed_in? %>
+              <%= link_to "Edit profil", edit_user_registration_path %>
+            <% else %>
+            <%= link_to "", ""  %>
+              <% end %></li>
           </ul>
           <ul style="list-style-type:none;">
-            <li style="float:right; margin-top: 12px;"><%= link_to "Sign in", new_user_session_path %></li>
+            <li style="float:right; margin-top: 12px;"><% if user_signed_in? %>
+    Hello,<%= current_user.full_name %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %>
+  <% end %></li>
           </ul>
         </div>
-        
       </div>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
@@ -72,9 +77,8 @@
           <div class="well sidebar-nav">
             <h3>Menu</h3>
             <ul class="nav nav-list">
-              <li><%= link_to "New Project", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to 'All Project', projects_path %></li>
+              <li><% if user_signed_in? %><%= link_to "New Project", new_project_path  %><% end %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
